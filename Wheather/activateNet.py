@@ -41,15 +41,21 @@ def do_setupWiFiSTA():
             while not sta_if.isconnected():
                 pass
             print('STA network config:', sta_if.ifconfig()) 
-            settime()
+            try:
+                settime()
+            except:
+                print("not able to connect to NTP server")
             return 0
         else:
-            print("No knows STA fund......running in AP mode only!!!")
+            print("No known STA found......running in AP mode only!!!")
             sta_if.active(False)
             return -1
 
     else:
         print("Already connected to AP")
         print('STA network config:', sta_if.ifconfig())
-        settime()
+        try:
+            settime()
+        except:
+            print("not able to connect to NTP server")
         return 0
