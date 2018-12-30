@@ -1,7 +1,0 @@
-HTTP/1.1 200 OK
-Server: LiteSpeed
-Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
-Content-Disposition: attachment; filename="dati.csv"
-Connection: close
-Cache-Control: no-cache
-Content-Length: 
