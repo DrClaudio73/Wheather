@@ -1,0 +1,1 @@
+i;tempodareboot;Data;Ora;dsTemp;dh11_Temp;dh11Hum
