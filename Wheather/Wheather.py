@@ -29,9 +29,11 @@ def updateWheateherValues(boardType,counterK,tempoalboot):
     dsTemp, dh11_Temp,dh11Hum = readenv.getvalues(boardType)
     tempodareboot=utime.time()-tempoalboot
     tloc=cettime()
-    tempolocaleFormattato=str(tloc[0])+"/"+str(tloc[1])+"/"+str(tloc[2])+"  "+str(tloc[3])+":"+str(tloc[4])+":"+str(tloc[5])
-    stringaHtmlDati_loc='            <tr><td>%d</td><td>%s</td><td>%s</td><td>%2.1f</td><td>%2.1f</td><td>%2.1f</td></tr>' % (counterK, tempodareboot,tempolocaleFormattato,dsTemp, dh11_Temp,dh11Hum) +'\n'
-    dati_loc=str(counterK)+";"+str(tempodareboot)+";"+str(tempolocaleFormattato)+";"+str(dsTemp)+";"+str(dh11_Temp)+";"+str(dh11Hum)+"\r\n"
+    tempolocaleFormattato=[]
+    tempolocaleFormattato.append(str(tloc[0])+"/"+str(tloc[1])+"/"+str(tloc[2]))
+    tempolocaleFormattato.append(str(tloc[3])+":"+str(tloc[4])+":"+str(tloc[5]))
+    stringaHtmlDati_loc='            <tr><td>%d</td><td>%d</td><td>%s</td><td>%s</td><td>%2.1f</td><td>%2.1f</td><td>%2.1f</td></tr>' % (counterK, tempodareboot,tempolocaleFormattato[0],tempolocaleFormattato[1],dsTemp, dh11_Temp,dh11Hum) +'\n'
+    dati_loc=str(counterK)+";"+str(tempodareboot)+";"+str(tempolocaleFormattato[0])+";"+str(tempolocaleFormattato[1])+";"+("%2.1f" % dsTemp)+";"+str(dh11_Temp)+";"+str(dh11Hum)+"\r\n"
     return stringaHtmlDati_loc, dati_loc
 
 def startWebServer(boardType):
