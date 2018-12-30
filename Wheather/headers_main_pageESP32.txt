@@ -22,4 +22,5 @@ Cache-Control: no-cache
     </head>    
     <body>
         <h1>ESP32 Wheather</h1>
-        <table border="1"> <tr><th>i</th><th>Time from reboot</th><th>Localtime Date</th><th>Localtime Time</th><th>DS Temperature [°C]</th><th>DH11 Temperature [°C]</th><th>DH11 Humidity [%]</th></tr>
+        <table border="1">
+            <tr><th>i</th><th>Time from reboot</th><th>Localtime Date</th><th>Localtime Time</th><th>DS Temperature [°C]</th><th>DH11 Temperature [°C]</th><th>DH11 Humidity [%]</th></tr>
